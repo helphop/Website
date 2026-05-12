@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muraloo – Big Art for Little Artists</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header>
+  <nav class="navbar">
+    <a href="#" aria-label="Muraloo home">
+      <img src="images/muraloo-logo.png" alt="Muraloo" class="nav-logo">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#product">The Product</a></li>
+      <li><a href="#inspiration">Inspiration</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <a href="#notify" class="btn btn-nav">
+      Notify Me <span class="star-gold">★</span>
+    </a>
+  </nav>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="about">
+  <div class="hero-inner">
+
+    <!-- Left: headline + copy -->
+    <div class="hero-text">
+      <h1 class="hero-h1">
+        Big art for<br>little artists. <span class="heart">♡</span>
+      </h1>
+      <p class="hero-body">
+        Muraloo is repositionable art paper<br>
+        that sticks anywhere, peels off clean,<br>
+        and turns any surface into a canvas.
+      </p>
+      <p class="hero-tagline">Draw. Dream. <span style="text-decoration:underline; text-underline-offset:3px;">Unroll the fun.</span></p>
+      <a href="#notify" class="btn btn-hero">
+        Notify Me <span class="star-gold">★</span>
+      </a>
+    </div>
+
+    <!-- Right: hero image + floating decorations -->
+    <div class="hero-img-col">
+      <!-- Sun drawn as SVG since no sun image -->
+      <svg class="deco deco-sun" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="40" cy="40" r="18" fill="#FFD93D" stroke="#FFB800" stroke-width="2"/>
+        <circle cx="40" cy="40" r="8" fill="#FFB800"/>
+        <!-- Rays -->
+        <g stroke="#FFD93D" stroke-width="3" stroke-linecap="round">
+          <line x1="40" y1="6"  x2="40" y2="16"/>
+          <line x1="40" y1="64" x2="40" y2="74"/>
+          <line x1="6"  y1="40" x2="16" y2="40"/>
+          <line x1="64" y1="40" x2="74" y2="40"/>
+          <line x1="14" y1="14" x2="21" y2="21"/>
+          <line x1="59" y1="59" x2="66" y2="66"/>
+          <line x1="66" y1="14" x2="59" y2="21"/>
+          <line x1="21" y1="59" x2="14" y2="66"/>
+          <!-- Smiley face -->
+        </g>
+        <circle cx="35" cy="37" r="2.5" fill="#fff"/>
+        <circle cx="45" cy="37" r="2.5" fill="#fff"/>
+        <path d="M34 44 Q40 49 46 44" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+
+      <svg class="deco deco-star1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><path d="M25.5 2l6.2 12.6 13.9 2-10.1 9.8 2.4 13.9L25.5 34l-12.4 6.3 2.4-13.9L5.4 16.6l13.9-2z" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      <svg class="deco deco-star2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><path d="M25.5 2l6.2 12.6 13.9 2-10.1 9.8 2.4 13.9L25.5 34l-12.4 6.3 2.4-13.9L5.4 16.6l13.9-2z" fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round" opacity="0.8"/></svg>
+      <img src="images/heart.png"    class="deco deco-heart" alt="">
+      <img src="images/hero-girl.png" class="hero-girl" alt="Child drawing a rainbow on Muraloo paper">
+    </div>
+
+  </div>
+
+  <!-- Product box sits inside hero, above the curve -->
+  <div class="product-showcase" id="product">
+    <img src="images/product-box.png"
+         class="product-box"
+         alt="Muraloo – 14 Metres of Drawing Fun">
+  </div>
+
+  <!-- Smooth semi-circle curve at hero bottom -->
+  <div class="hero-curve">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260" preserveAspectRatio="none">
+      <path d="M0,260 C320,81 680,53 1020,138 C1150,160 1320,210 1440,260 L1440,260 L0,260 Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ==================== FEATURES ==================== -->
+<section class="features" id="features">
+  <div class="features-header">
+    <svg class="features-star-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><path d="M25.5 2l6.2 12.6 13.9 2-10.1 9.8 2.4 13.9L25.5 34l-12.4 6.3 2.4-13.9L5.4 16.6l13.9-2z" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    <h2 class="features-h2">Create anywhere. Anytime.</h2>
+    <svg class="features-star-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51"><path d="M25.5 2l6.2 12.6 13.9 2-10.1 9.8 2.4 13.9L25.5 34l-12.4 6.3 2.4-13.9L5.4 16.6l13.9-2z" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linejoin="round"/></svg>
+  </div>
+
+  <div class="features-grid">
+
+    <!-- 1: Unroll the fun -->
+    <div class="feature-card">
+      <div class="feature-icon fi-purple">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="18" width="40" height="28" rx="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2.5"/>
+          <ellipse cx="32" cy="18" rx="14" ry="5" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+          <ellipse cx="32" cy="46" rx="14" ry="5" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
+          <line x1="23" y1="22" x2="23" y2="42" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <line x1="32" y1="23" x2="32" y2="41" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <line x1="41" y1="22" x2="41" y2="42" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+      </div>
+      <h3 class="feature-title ft-purple">Unroll the fun</h3>
+      <p class="feature-desc">14 meters of premium art paper in one roll.</p>
+    </div>
+
+    <!-- 2: Sticks anywhere -->
+    <div class="feature-card">
+      <div class="feature-icon fi-blue">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="38" height="48" rx="3" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+          <path d="M12 12 L42 12 L42 26 Q36 20 30 22 Q24 24 20 28 L12 28 Z" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
+          <path d="M42 12 L42 28 Q36 22 30 22" fill="#93c5fd"/>
+          <line x1="14" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <line x1="14" y1="42" x2="36" y2="42" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          <line x1="14" y1="48" x2="32" y2="48" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+          <circle cx="54" cy="20" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+          <path d="M50 20 L58 20 M54 16 L58 20 L54 24" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="feature-title ft-blue">Sticks anywhere</h3>
+      <p class="feature-desc">Easy to put up, stays securely in place.</p>
+    </div>
+
+    <!-- 3: Peels off clean -->
+    <div class="feature-card">
+      <div class="feature-icon fi-green">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="10" width="38" height="46" rx="3" fill="#d1fae5" stroke="#16a34a" stroke-width="2.5"/>
+          <path d="M46 10 L46 26 Q38 20 30 26 L30 10 Z" fill="#6ee7b7" stroke="#16a34a" stroke-width="2"/>
+          <path d="M46 10 L30 10 L30 26 Q38 20 46 26" fill="#a7f3d0"/>
+          <circle cx="22" cy="42" r="10" fill="#d1fae5" stroke="#16a34a" stroke-width="2"/>
+          <path d="M17 42 L21 46 L27 38" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="feature-title ft-green">Peels off clean</h3>
+      <p class="feature-desc">No tape. No mess. No damage.</p>
+    </div>
+
+    <!-- 4: Made for little artists -->
+    <div class="feature-card">
+      <div class="feature-icon fi-orange">
+        <img src="images/stick-figure.png" alt="">
+      </div>
+      <h3 class="feature-title ft-orange">Made for little artists</h3>
+      <p class="feature-desc">Perfect for kids 2+ and big imaginations.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== CTA / EMAIL ==================== -->
+<section class="cta-section" id="notify">
+  <div class="cta-card">
+
+    <div class="cta-left">
+      <h2>
+        Something creative<br>is coming soon!
+        <span class="cta-star">★</span>
+      </h2>
+      <p>
+        Be the first to know when Muraloo<br>
+        launches and get exclusive updates,<br>
+        early access, and fun ideas.
+      </p>
+    </div>
+
+    <div class="cta-right">
+      <form class="email-pill" onsubmit="handleSubmit(event)">
+        <input type="email" placeholder="Enter your email" required aria-label="Email address">
+        <button type="submit">
+          Notify Me <span class="star-gold">★</span>
+        </button>
+      </form>
+      <p class="cta-privacy">We respect your privacy. Unsubscribe anytime.</p>
+      <p class="cta-heart">♡</p>
+    </div>
+
+    <div class="cta-wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 40" preserveAspectRatio="none">
+        <path d="M0,18 Q25,6 50,18 Q75,30 100,18 Q125,6 150,18 Q175,30 200,18 Q225,6 250,18 Q275,30 300,18 Q325,6 350,18 Q375,30 400,18 Q425,6 450,18 Q475,30 500,18 Q525,6 550,18 Q575,30 600,18 Q625,6 650,18 Q675,30 700,18 Q725,6 750,18 Q775,30 800,18 Q825,6 850,18 Q875,30 900,18 Q925,6 950,18 Q975,30 1000,18 Q1025,6 1050,18 Q1075,30 1100,18 Q1125,6 1150,18 Q1175,30 1200,18 Q1225,6 1250,18 Q1275,30 1300,18 L1300,40 L0,40 Z" fill="white"/>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== FOOTER WAVE ==================== -->
+<div class="footer-wave" style="display:none;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z"
+          fill="white"/>
+  </svg>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="faq">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <!-- Logo -->
+      <div class="footer-logo-wrap">
+        <a href="#">
+          <img src="images/muraloo-logo.png" alt="Muraloo" class="footer-logo">
+        </a>
+      </div>
+
+      <!-- Nav -->
+      <ul class="footer-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#product">The Product</a></li>
+        <li><a href="#inspiration">Inspiration</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#notify">Contact</a></li>
+      </ul>
+
+      <!-- Social -->
+      <div class="social-row">
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+    <p class="footer-copy">© 2025 DreamFX Inc. All rights reserved.</p>
+
+  </div>
+</footer>
+
+<!-- ==================== SCRIPT ==================== -->
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form  = e.target;
+    const input = form.querySelector('input[type="email"]');
+    const btn   = form.querySelector('button');
+
+    btn.textContent = '✓ You\'re on the list!';
+    btn.style.background = '#16a34a';
+    input.value = '';
+    input.placeholder = 'Thanks! We\'ll be in touch.';
+    input.disabled = true;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = 'Notify Me <span style="color:#f59e0b">★</span>';
+      btn.style.background = '';
+      input.placeholder = 'Enter your email';
+      input.disabled = false;
+      btn.disabled = false;
+    }, 5000);
+  }
+</script>
+
+</body>
+</html>
