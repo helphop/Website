@@ -216,13 +216,17 @@
     </div>
 
     <div class="cta-right">
-      <form class="email-pill" id="notify-form">
+      <form class="email-pill" id="notify-form"
+            data-endpoint="https://listmonk-subscribe.mitchell-gould.workers.dev/"
+            data-list-id="9536ca76-9938-4c0f-919c-83ea72780d8f">
         <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address" autocomplete="email" inputmode="email">
         <input type="text" name="company" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button type="submit">
-          Notify Me <span class="star-gold" aria-hidden="true">★</span>
+          <span class="btn-label">Notify Me</span>
+          <span class="star-gold" aria-hidden="true">★</span>
         </button>
       </form>
+      <p class="form-status" role="status" aria-live="polite"></p>
       <p class="cta-privacy">We respect your privacy. Unsubscribe anytime.</p>
       <p class="cta-heart" aria-hidden="true">♡</p>
     </div>

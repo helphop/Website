@@ -24,57 +24,82 @@ navLinks.addEventListener('click', (e) => {
 });
 
 /* ===================== EMAIL FORM ===================== */
-const form = document.getElementById('notify-form');
+const form     = document.getElementById('notify-form');
+const input    = form.querySelector('input[type="email"]');
+const honeypot = form.querySelector('.hp-field');
+const btn      = form.querySelector('button');
+const btnLabel = btn.querySelector('.btn-label');
+const status   = document.querySelector('.form-status');
+
+const ENDPOINT = form.dataset.endpoint;
+const LIST_ID  = form.dataset.listId;
+const DEFAULT_LABEL       = btnLabel.textContent;
+const DEFAULT_PLACEHOLDER = input.placeholder;
+const SUCCESS_RESET_MS = 5000;
+const ERROR_RESET_MS   = 3000;
+
+let resetTimer = null;
+let inFlight   = false;
+
+function setState(state, { label, placeholder, message } = {}) {
+  form.classList.remove('is-loading', 'is-success', 'is-error');
+  if (state !== 'idle') form.classList.add(`is-${state}`);
+  if (label       !== undefined) btnLabel.textContent  = label;
+  if (placeholder !== undefined) input.placeholder     = placeholder;
+  if (message     !== undefined) status.textContent    = message;
+}
+
+function resetToIdle() {
+  setState('idle', { label: DEFAULT_LABEL, placeholder: DEFAULT_PLACEHOLDER, message: '' });
+  input.disabled = false;
+  btn.disabled   = false;
+  inFlight = false;
+}
 
 async function handleSubmit(e) {
   e.preventDefault();
-  const input = form.querySelector('input[type="email"]');
-  const honeypot = form.querySelector('.hp-field');
-  const btn = form.querySelector('button');
-  const email = input.value.trim();
+  if (inFlight) return;
+  if (honeypot.value) return;
 
-  if (honeypot && honeypot.value) return;
-
-  btn.textContent = 'Subscribing...';
-  btn.disabled = true;
+  clearTimeout(resetTimer);
+  inFlight = true;
+  setState('loading', { label: 'Subscribing…', message: '' });
   input.disabled = true;
+  btn.disabled   = true;
 
   try {
-    const response = await fetch('https://listmonk-subscribe.mitchell-gould.workers.dev/', {
-      method: 'POST',
+    const response = await fetch(ENDPOINT, {
+      method:  'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        email: email,
-        name: '',
-        l: '9536ca76-9938-4c0f-919c-83ea72780d8f',
+      body:    new URLSearchParams({
+        email: input.value.trim(),
+        name:  '',
+        l:     LIST_ID,
         nonce: ''
       })
     });
 
-    if (response.ok) {
-      btn.innerHTML = '✓ You\'re on the list!';
-      btn.style.background = '#16a34a';
-      input.value = '';
-      input.placeholder = 'Thanks! Check your email to confirm.';
-      setTimeout(() => {
-        btn.innerHTML = 'Notify Me <span style="color:#f59e0b">★</span>';
-        btn.style.background = '';
-        input.placeholder = 'Enter your email';
-        input.disabled = false;
-        btn.disabled = false;
-      }, 5000);
-    } else {
-      throw new Error('Failed');
-    }
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    setState('success', {
+      label:       "✓ You're on the list!",
+      placeholder: 'Thanks! Check your email to confirm.',
+      message:     ''
+    });
+    input.value = '';
+    resetTimer = setTimeout(resetToIdle, SUCCESS_RESET_MS);
   } catch (error) {
-    btn.innerHTML = 'Try again';
-    btn.style.background = '#dc2626';
+    console.error('Subscription failed:', error);
+    const message = navigator.onLine
+      ? "Something went wrong. Please try again in a moment."
+      : "You appear to be offline. Check your connection and retry.";
+    setState('error', { label: 'Try again', message });
     input.disabled = false;
-    btn.disabled = false;
-    setTimeout(() => {
-      btn.innerHTML = 'Notify Me <span style="color:#f59e0b">★</span>';
-      btn.style.background = '';
-    }, 3000);
+    btn.disabled   = false;
+    resetTimer = setTimeout(() => {
+      setState('idle', { label: DEFAULT_LABEL, message: '' });
+      inFlight = false;
+    }, ERROR_RESET_MS);
   }
 }
 

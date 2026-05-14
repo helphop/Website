@@ -450,6 +450,22 @@ a { text-decoration: none; }
 }
 .email-pill button:hover { background: #4c1d95; }
 
+/* Submit states */
+.email-pill.is-loading button { cursor: wait; opacity: 0.85; }
+.email-pill.is-success button,
+.email-pill.is-success button:hover { background: var(--green); }
+.email-pill.is-error   button,
+.email-pill.is-error   button:hover { background: #dc2626; }
+
+.form-status {
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 1.2em;
+  margin-bottom: 6px;
+  color: #fef3c7;
+}
+.form-status:empty { display: none; }
+
 .cta-privacy { font-size: 12px; color: rgba(255,255,255,0.75); margin-bottom: 10px; }
 .cta-heart   { font-size: 22px; color: rgba(255,255,255,0.85); }
 
