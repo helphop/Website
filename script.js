@@ -3,8 +3,11 @@ const form = document.getElementById('notify-form');
 async function handleSubmit(e) {
   e.preventDefault();
   const input = form.querySelector('input[type="email"]');
+  const honeypot = form.querySelector('.hp-field');
   const btn = form.querySelector('button');
   const email = input.value.trim();
+
+  if (honeypot && honeypot.value) return;
 
   btn.textContent = 'Subscribing...';
   btn.disabled = true;
