@@ -11,14 +11,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Muraloo – Big Art for Little Artists">
   <meta property="og:description" content="Repositionable art paper for kids. Sticks anywhere, peels off clean, turns any surface into a canvas.">
-  <meta property="og:image" content="images/hero-girl.png">
+  <meta property="og:image" content="images/hero.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Muraloo – Big Art for Little Artists">
   <meta name="twitter:description" content="Repositionable art paper for kids. Sticks anywhere, peels off clean, turns any surface into a canvas.">
-  <meta name="twitter:image" content="images/hero-girl.png">
+  <meta name="twitter:image" content="images/hero.png">
 
   <link rel="icon" type="image/png" href="images/muraloo-logo.png">
-  <link rel="preload" as="image" href="images/hero-girl.png">
+  <link rel="preload" as="image" href="images/hero.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,8 +41,9 @@
 <!-- ==================== NAVBAR ==================== -->
 <header>
   <nav class="navbar">
-    <a href="#" aria-label="Muraloo home">
-      <img src="images/muraloo-logo.png" alt="Muraloo" class="nav-logo">
+    <a href="#" class="logo-wrap" aria-label="Muraloo home">
+      <img src="images/muraloo-logo.png" alt="" class="nav-logo">
+      <span class="logo-tagline">Unroll the fun.</span>
     </a>
 
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
@@ -66,134 +67,126 @@
 <section class="hero" id="about">
   <div class="hero-inner">
 
-    <!-- Left: headline + copy -->
-    <div class="hero-text">
-      <h1 class="hero-h1">
-        Big art for<br>little artists. <span class="heart" aria-hidden="true">♡</span>
-      </h1>
-      <p class="hero-body">
-        Muraloo is repositionable art paper<br>
-        that sticks anywhere, peels off clean,<br>
-        and turns any surface into a canvas.
-      </p>
-      <p class="hero-tagline">Draw. Dream. <span class="underline">Unroll the fun.</span></p>
-      <a href="#notify" class="btn btn-hero">
-        Notify Me <span class="star-gold" aria-hidden="true">★</span>
-      </a>
+    <div class="hero-left">
+      <div class="hero-text">
+        <h1 class="hero-h1">
+          Big art for<br>little artists.
+        </h1>
+        <p class="hero-body">
+          Repositionable art paper that sticks anywhere, peels off clean,
+          and turns any space into a canvas.
+        </p>
+        <p class="hero-tagline">
+          Draw. Dream. <span class="hero-tagline-accent">Unroll the fun.</span>
+        </p>
+        <a href="#notify" class="btn btn-hero">
+          Notify Me <span class="star-gold" aria-hidden="true">★</span>
+        </a>
+      </div>
+
+      <div class="hero-product" id="product">
+        <img src="images/box.png" class="product-box" alt="Muraloo – 14 Metres of Drawing Fun">
+      </div>
     </div>
 
-    <!-- Right: hero image + floating decorations -->
-    <div class="hero-img-col">
-      <!-- Sun drawn as SVG since no sun image -->
-      <svg class="deco deco-sun" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="40" cy="40" r="18" fill="#FFD93D" stroke="#FFB800" stroke-width="2"/>
-        <circle cx="40" cy="40" r="8" fill="#FFB800"/>
-        <!-- Rays -->
-        <g stroke="#FFD93D" stroke-width="3" stroke-linecap="round">
-          <line x1="40" y1="6"  x2="40" y2="16"/>
-          <line x1="40" y1="64" x2="40" y2="74"/>
-          <line x1="6"  y1="40" x2="16" y2="40"/>
-          <line x1="64" y1="40" x2="74" y2="40"/>
-          <line x1="14" y1="14" x2="21" y2="21"/>
-          <line x1="59" y1="59" x2="66" y2="66"/>
-          <line x1="66" y1="14" x2="59" y2="21"/>
-          <line x1="21" y1="59" x2="14" y2="66"/>
-          <!-- Smiley face -->
-        </g>
-        <circle cx="35" cy="37" r="2.5" fill="#fff"/>
-        <circle cx="45" cy="37" r="2.5" fill="#fff"/>
-        <path d="M34 44 Q40 49 46 44" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
-      </svg>
-
-      <svg class="deco deco-star1" viewBox="0 0 51 51" aria-hidden="true"><use href="#icon-star"/></svg>
-      <svg class="deco deco-star2" viewBox="0 0 51 51" aria-hidden="true"><use href="#icon-star"/></svg>
-      <img src="images/heart.png"    class="deco deco-heart" alt="">
-      <img src="images/hero-girl.png" class="hero-girl" alt="Child drawing a rainbow on Muraloo paper">
+    <div class="hero-photo">
+      <img src="images/hero.png" alt="Two children drawing colorful pictures on Muraloo paper attached to a wall">
+      <img src="images/heart.png" class="hero-heart" alt="" aria-hidden="true">
     </div>
 
-  </div>
-
-  <!-- Product box sits inside hero, above the curve -->
-  <div class="product-showcase" id="product">
-    <img src="images/product-box.png"
-         class="product-box"
-         alt="Muraloo – 14 Metres of Drawing Fun">
-  </div>
-
-  <!-- Smooth semi-circle curve at hero bottom -->
-  <div class="hero-curve">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260" preserveAspectRatio="none">
-      <path d="M0,260 C320,81 680,53 1020,138 C1150,160 1320,210 1440,260 L1440,260 L0,260 Z" fill="white"/>
-    </svg>
   </div>
 </section>
 
 <!-- ==================== FEATURES ==================== -->
 <section class="features" id="features">
   <div class="features-header">
-    <svg class="features-star-left" viewBox="0 0 51 51" aria-hidden="true"><use href="#icon-star"/></svg>
-    <h2 class="features-h2">Create anywhere. Anytime.</h2>
-    <svg class="features-star-right" viewBox="0 0 51 51" aria-hidden="true"><use href="#icon-star"/></svg>
+    <svg class="scribble scribble-star" viewBox="0 0 51 51" aria-hidden="true"><use href="#icon-star"/></svg>
+    <h2 class="features-h2">Create Anywhere</h2>
+    <svg class="scribble scribble-cloud" viewBox="0 0 68 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M15 37C8 37 2 31 2 23C2 16 7 10 15 10C15 5 19 2 26 2C32 2 37 5 39 10C43 7 50 9 53 15C59 15 66 20 66 27C66 33 60 37 53 37Z" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="scribble scribble-heart" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M19 31C19 31 3 20 3 10C3 5 7 2 12 2C15 2 17 4 19 6C21 4 23 2 26 2C31 2 35 5 35 10C35 20 19 31 19 31Z" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 
   <div class="features-grid">
 
-    <!-- 1: Unroll the fun -->
     <div class="feature-card">
       <div class="feature-icon fi-purple">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="12" y="18" width="40" height="28" rx="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2.5"/>
-          <ellipse cx="32" cy="18" rx="14" ry="5" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
-          <ellipse cx="32" cy="46" rx="14" ry="5" fill="#c4b5fd" stroke="#7c3aed" stroke-width="2"/>
-          <line x1="23" y1="22" x2="23" y2="42" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-          <line x1="32" y1="23" x2="32" y2="41" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-          <line x1="41" y1="22" x2="41" y2="42" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-        </svg>
+        <img src="images/tape-icon.png" alt="" aria-hidden="true">
       </div>
-      <h3 class="feature-title ft-purple">Unroll the fun</h3>
-      <p class="feature-desc">14 meters of premium art paper in one roll.</p>
+      <h3 class="feature-title ft-purple">14 meters of<br>creative freedom</h3>
+      <p class="feature-desc">One roll.<br>Endless possibilities.</p>
     </div>
 
-    <!-- 2: Sticks anywhere -->
     <div class="feature-card">
       <div class="feature-icon fi-blue">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="8" width="38" height="48" rx="3" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
-          <path d="M12 12 L42 12 L42 26 Q36 20 30 22 Q24 24 20 28 L12 28 Z" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.5"/>
-          <path d="M42 12 L42 28 Q36 22 30 22" fill="#93c5fd"/>
-          <line x1="14" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-          <line x1="14" y1="42" x2="36" y2="42" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-          <line x1="14" y1="48" x2="32" y2="48" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
-          <circle cx="54" cy="20" r="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-          <path d="M50 20 L58 20 M54 16 L58 20 L54 24" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <img src="images/stick-icon.png" alt="" aria-hidden="true">
       </div>
-      <h3 class="feature-title ft-blue">Sticks anywhere</h3>
-      <p class="feature-desc">Easy to put up, stays securely in place.</p>
+      <h3 class="feature-title ft-blue">Sticks<br>anywhere</h3>
+      <p class="feature-desc">Walls, tables, floors,<br>windows and more.</p>
     </div>
 
-    <!-- 3: Peels off clean -->
-    <div class="feature-card">
-      <div class="feature-icon fi-green">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="10" width="38" height="46" rx="3" fill="#d1fae5" stroke="#16a34a" stroke-width="2.5"/>
-          <path d="M46 10 L46 26 Q38 20 30 26 L30 10 Z" fill="#6ee7b7" stroke="#16a34a" stroke-width="2"/>
-          <path d="M46 10 L30 10 L30 26 Q38 20 46 26" fill="#a7f3d0"/>
-          <circle cx="22" cy="42" r="10" fill="#d1fae5" stroke="#16a34a" stroke-width="2"/>
-          <path d="M17 42 L21 46 L27 38" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <h3 class="feature-title ft-green">Peels off clean</h3>
-      <p class="feature-desc">No tape. No mess. No damage.</p>
-    </div>
-
-    <!-- 4: Made for little artists -->
     <div class="feature-card">
       <div class="feature-icon fi-orange">
-        <img src="images/stick-figure.png" alt="">
+        <img src="images/peel-icon.png" alt="" aria-hidden="true">
       </div>
-      <h3 class="feature-title ft-orange">Made for little artists</h3>
-      <p class="feature-desc">Perfect for kids 2+ and big imaginations.</p>
+      <h3 class="feature-title ft-orange">Peels off<br>clean</h3>
+      <p class="feature-desc">No tape. No mess.<br>No damage.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon fi-green">
+        <img src="images/artist-icon.png" alt="" aria-hidden="true">
+      </div>
+      <h3 class="feature-title ft-green">Made for<br>little artists</h3>
+      <p class="feature-desc">Perfect for kids 2+<br>and big imaginations.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== WAYS TO PLAY ==================== -->
+<section class="ways-section">
+  <div class="ways-inner">
+
+    <div class="ways-left">
+      <h2 class="ways-h2">So many<br>ways to play.</h2>
+
+      <p class="ways-body">From walls to tables to floors and windows—Muraloo goes where creativity happens.</p>
+      <a href="#notify" class="btn btn-ways">Get inspired <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="ways-photos">
+      <div class="ways-photo-item">
+        <img src="images/rainyday.png" alt="Child drawing a rainy day mural on Muraloo paper">
+        <div class="ways-caption">
+          <img src="images/rainy-icon.png" alt="" aria-hidden="true">
+          <span>Rainy day<br>murals</span>
+        </div>
+      </div>
+      <div class="ways-photo-item">
+        <img src="images/tabletop.png" alt="Children doing tabletop art with Muraloo">
+        <div class="ways-caption">
+          <img src="images/tabletop-icon.png" alt="" aria-hidden="true">
+          <span>Tabletop<br>creativity</span>
+        </div>
+      </div>
+      <div class="ways-photo-item">
+        <img src="images/floortime.png" alt="Child creating floor time masterpieces with Muraloo">
+        <div class="ways-caption">
+          <img src="images/start-icon.png" alt="" aria-hidden="true">
+          <span>Floor time<br>masterpieces</span>
+        </div>
+      </div>
+      <div class="ways-photo-item">
+        <img src="images/window.png" alt="Child creating window masterpieces with Muraloo">
+        <div class="ways-caption">
+          <img src="images/sun-icon.png" alt="" aria-hidden="true">
+          <span>Window<br>masterpieces</span>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -204,15 +197,17 @@
   <div class="cta-card">
 
     <div class="cta-left">
-      <h2>
-        Something creative<br>is coming soon!
-        <span class="cta-star" aria-hidden="true">★</span>
-      </h2>
-      <p>
-        Be the first to know when Muraloo<br>
-        launches and get exclusive updates,<br>
-        early access, and fun ideas.
-      </p>
+      <img src="images/sun-icon-lg.png" class="cta-sun" alt="" aria-hidden="true">
+      <div class="cta-left-text">
+        <h2>
+          <span>Be the first to<br>unroll the fun.</span>
+          <svg class="cta-star-deco" viewBox="0 0 51 51" fill="none" aria-hidden="true">
+            <path d="M25.5 2l6.2 12.6 13.9 2-10.1 9.8 2.4 13.9L25.5 34l-12.4 6.3 2.4-13.9L5.4 16.6l13.9-2z"
+                  stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+        </h2>
+        <p>Join the launch list for early access,<br>exclusive offers, and creative ideas.</p>
+      </div>
     </div>
 
     <div class="cta-right">
@@ -250,8 +245,9 @@
 
       <!-- Logo -->
       <div class="footer-logo-wrap">
-        <a href="#">
-          <img src="images/muraloo-logo.png" alt="Muraloo" class="footer-logo">
+        <a href="#" class="logo-wrap">
+          <img src="images/muraloo-logo.png" alt="" class="footer-logo">
+          <span class="logo-tagline logo-tagline-dark">Unroll the fun.</span>
         </a>
       </div>
 
