@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"/Users/mitchellgould/Library/Mobile Documents/com~apple~CloudDocs/Muraloo Project/Muraloo/Website\" show --stat HEAD)"
+    ]
+  }
+}
