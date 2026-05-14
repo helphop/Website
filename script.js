@@ -1,3 +1,29 @@
+/* ===================== MOBILE NAV ===================== */
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks  = document.getElementById('primary-nav');
+
+function setNavOpen(open) {
+  navToggle.setAttribute('aria-expanded', String(open));
+}
+
+navToggle.addEventListener('click', () => {
+  const open = navToggle.getAttribute('aria-expanded') === 'true';
+  setNavOpen(!open);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setNavOpen(false);
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.navbar')) setNavOpen(false);
+});
+
+navLinks.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') setNavOpen(false);
+});
+
+/* ===================== EMAIL FORM ===================== */
 const form = document.getElementById('notify-form');
 
 async function handleSubmit(e) {

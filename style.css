@@ -81,8 +81,9 @@ a { text-decoration: none; }
 .btn-nav {
   background: white;
   color: var(--dark);
-  padding: 7px 22px;
+  padding: 12px 24px;
   font-size: 15px;
+  min-height: 44px;
 }
 .btn-nav:hover { box-shadow: 0 4px 16px rgba(30,27,75,0.2); }
 
@@ -124,6 +125,30 @@ a { text-decoration: none; }
   transition: opacity 0.15s;
 }
 .nav-links a:hover { opacity: 0.75; }
+
+/* Hamburger toggle — hidden on desktop, visible <768px */
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 /* ===================== HERO ===================== */
 .hero {
@@ -482,6 +507,30 @@ footer {
 .footer-divider { border: none; border-top: 1px solid #e5e7eb; margin-bottom: 20px; }
 .footer-copy { text-align: center; font-size: 13px; color: #9ca3af; }
 
+/* ===================== ACCESSIBILITY ===================== */
+:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn:focus-visible,
+.email-pill button:focus-visible {
+  outline-offset: 4px;
+}
+.email-pill:focus-within {
+  outline: 3px solid var(--amber);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 1024px) {
   .navbar       { padding-block: 20px; }
@@ -494,7 +543,22 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .nav-links    { display: none; }
+  .nav-toggle   { display: flex; }
+  .nav-links    {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: var(--gutter);
+    right: var(--gutter);
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    background: rgba(30, 27, 75, 0.95);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+  }
+  .navbar:has(.nav-toggle[aria-expanded="true"]) .nav-links { display: flex; }
+  .nav-links a { display: block; padding: 10px 12px; min-height: 44px; }
   .hero-inner   {
     grid-template-columns: 1fr;
     grid-template-areas:
