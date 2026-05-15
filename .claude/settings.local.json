@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git -C \"/Users/mitchellgould/Library/Mobile Documents/com~apple~CloudDocs/Muraloo Project/Muraloo/Website\" show --stat HEAD)"
+      "Bash(git -C \"/Users/mitchellgould/Library/Mobile Documents/com~apple~CloudDocs/Muraloo Project/Muraloo/Website\" show --stat HEAD)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{content_type}\" https://muraloo.com/style.css)",
+      "Bash(curl -s https://muraloo.com/style.css)",
+      "Bash(git -C \"/Users/mitchellgould/Library/Mobile Documents/com~apple~CloudDocs/Muraloo Project/Muraloo/Website\" commit --allow-empty -m \"fix: force GitHub Pages redeploy\")",
+      "Bash(git -C \"/Users/mitchellgould/Library/Mobile Documents/com~apple~CloudDocs/Muraloo Project/Muraloo/Website\" push)"
     ]
   }
 }

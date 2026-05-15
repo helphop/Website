@@ -528,7 +528,7 @@ header {
   container-type: inline-size;
 }
 .cta-card {
-  max-width: var(--container-max);
+  max-width: var(--container-wide);
   margin: 0 auto;
   background: var(--gradient);
   border-radius: var(--radius-card);
@@ -563,9 +563,10 @@ header {
   gap: 24px;
 }
 .cta-sun {
-  width: 162px;
+  width: 210px;
   height: auto;
   flex-shrink: 0;
+  align-self: center;
   filter: brightness(0) invert(1);
 }
 .cta-left-text h2 {
